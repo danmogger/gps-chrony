@@ -1,5 +1,7 @@
 FROM dhi.io/alpine-base:3.23-dev
-# dhi is docker hardened image for alpine. this version is compliant
+# dhi is docker hardened image for alpine for arm64 only
+
+# for 32 bit (raspberry pi zero, 1, 2) comment out the above FROM and uncomment this one
 #FROM alpine
 
 ARG BUILD_DATE

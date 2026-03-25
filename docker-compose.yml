@@ -1,0 +1,18 @@
+services:
+  gps-chrony:
+    container_name: gps-chrony
+    image: gps-chrony
+    cap_add:
+      - SYS_TIME
+    build: .
+    ports:
+      - "123:123/udp"
+    environment:
+      - USER_ID=1000
+      - GROUP_ID=1000
+      - DEVICE=/dev/ttyACM0
+      - TZ=ETC/UTC
+    devices:
+      - "/dev/ttyACM0:/dev/ttyACM0"
+    privileged: true
+    restart: unless-stopped

@@ -1,7 +1,7 @@
 services:
-  gps-chrony:
-    container_name: gps-chrony
-    image: gps-chrony
+  gps-test:
+    container_name: gps-test
+    image: gps-test:1.0
     cap_add:
       - SYS_TIME
     build: .

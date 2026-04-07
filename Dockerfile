@@ -29,6 +29,6 @@ RUN chmod +x /root/start.sh
 HEALTHCHECK CMD chronyc sources || exit 1
 
 ### Start script
-#ENTRYPOINT ["sh", "-c", "/root/start.sh"]
-CMD ["/root/start.sh"]
+ENTRYPOINT ["sh", "-c", "/root/start.sh"]
+#CMD ["/root/start.sh"]
 #ENTRYPOINT ["sleep", "infinity"

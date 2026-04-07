@@ -9,12 +9,13 @@ USBAUTO="false"
 # Devices gpsd should collect to at boot time.
 # They need to be read/writeable, either by user gpsd or the group dialout.
 # DEVICES="/dev/ttyACM1"
+DEVICES="/dev/ttyACM0"
 
 # Other options you want to pass to gpsd
-GPSD_OPTIONS="-n"
+GPSD_OPTIONS="-n -b -r"
 #GPSD_OPTIONS="-n -D 1"
 
 ENABLED="true"
 
-#GPS_BAUD=9600
+GPS_BAUD=9600
 GPSD_SOCKET="/var/run/gpsd.sock"

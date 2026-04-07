@@ -1,7 +1,7 @@
 #!/bin/sh
 
-gpsd ${DEVICE} -n -F /var/run/gpsd.sock -P /run/gpsd/gpsd.pid -G
+gpsd ${DEVICE} -n -b -r -F /var/run/gpsd.sock -P /run/gpsd/gpsd.pid -G
 
-chronyd -n -f /etc/chrony/chrony.conf
+chronyd -m -d -f /etc/chrony/chrony.conf
 
 #sleep infinity
